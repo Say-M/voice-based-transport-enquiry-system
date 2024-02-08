@@ -9,3 +9,24 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+
+.form-control,
+.form-select,
+.btn {
+  font-size: 0.875rem;
+}
+.form-select {
+  background-size: 14px 10px;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+  .card-title {
+    font-weight: 600;
+  }
+}

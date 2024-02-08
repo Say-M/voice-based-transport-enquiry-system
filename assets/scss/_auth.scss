@@ -5,6 +5,9 @@
     height: 100%;
     width: 50%;
     background-color: #f1f5f9;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
   .right {
     height: 100%;
@@ -12,12 +15,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
     .form {
       max-width: 400px;
       width: 100%;
       margin: 0 auto;
-      h4 {
-        font-weight: 600;
+      padding: 1rem;
+      .head-text {
+        text-align: center;
+        h4 {
+          font-weight: 600;
+        }
+        p {
+          font-size: 0.85rem;
+          color: #6c757d;
+        }
       }
       .or-separator {
         position: relative;
@@ -40,7 +54,7 @@
           text-align: center;
           background-color: #fff;
           font-size: 0.85rem;
-          color: #414141;
+          color: #6c757d;
           margin-bottom: 0;
         }
       }

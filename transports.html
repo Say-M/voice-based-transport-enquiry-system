@@ -84,7 +84,7 @@
       </aside>
       <div class="content-wrapper">
         <div class="breadcrumb-wrapper">
-          <h3>Dashboard</h3>
+          <h3>Transports</h3>
           <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item active" aria-current="page">
@@ -94,77 +94,13 @@
           </nav> -->
         </div>
         <div class="container-lg">
-          <div class="mb-4">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Today's Income
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-solid fa-money-bill"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10,000 BDT</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Total Vehicles
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-solid fa-bus"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Total Drivers
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-regular fa-id-card"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Today's Customers
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-solid fa-users"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="card">
             <div class="card-body">
               <div
                 class="d-flex align-items-center justify-content-between mb-3"
               >
-                <h5 class="card-title mb-0">Today's Transportation</h5>
-                <div>
+                <h5 class="card-title mb-0">All Transports</h5>
+                <div class="d-flex align-items-center gap-3">
                   <select class="form-select">
                     <option selected value="all">All</option>
                     <option value="Bus">Bus</option>
@@ -172,6 +108,12 @@
                     <option value="Launch">Launch</option>
                     <option value="Flight">Flight</option>
                   </select>
+                  <a
+                    href="/add-transport.html"
+                    class="btn btn-primary text-nowrap"
+                  >
+                    Add Transport
+                  </a>
                 </div>
               </div>
               <div class="table-responsive">
@@ -179,33 +121,73 @@
                   <thead>
                     <tr>
                       <th scope="col">SL</th>
+                      <th scope="col">Name</th>
                       <th scope="col">Type</th>
-                      <th scope="col">Departure</th>
-                      <th scope="col">Destination</th>
-                      <th scope="col">Arrival</th>
+                      <th scope="col">Seat</th>
+                      <th scope="col">Reg. No</th>
+                      <th scope="col">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
+                      <td>Volvo</td>
                       <td>Bus</td>
-                      <td>Dhaka</td>
-                      <td>Chittagong</td>
-                      <td>10:00 AM</td>
+                      <td>40</td>
+                      <td>DM-123456</td>
+                      <td>
+                        <a
+                          href="/edit-transport.html"
+                          class="btn btn-sm btn-dark"
+                          >Edit</a
+                        >
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
+                      <td>Dhaka Express</td>
                       <td>Train</td>
-                      <td>Dhaka</td>
-                      <td>Chittagong</td>
-                      <td>10:00 AM</td>
+                      <td>200</td>
+                      <td>DM-123457</td>
+                      <td>
+                        <a
+                          href="/edit-transport.html"
+                          class="btn btn-sm btn-dark"
+                          >Edit</a
+                        >
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
-                      <td>Train</td>
-                      <td>Dhaka</td>
-                      <td>Chittagong</td>
-                      <td>10:00 AM</td>
+                      <td>Green Line</td>
+                      <td>Launch</td>
+                      <td>100</td>
+                      <td>DM-123458</td>
+                      <td>
+                        <a
+                          href="/edit-transport.html"
+                          class="btn btn-sm btn-dark"
+                          >Edit</a
+                        >
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Boeing 747</td>
+                      <td>Flight</td>
+                      <td>300</td>
+                      <td>DM-123459</td>
+                      <td>
+                        <a
+                          href="/edit-transport.html"
+                          class="btn btn-sm btn-dark"
+                          >Edit</a
+                        >
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -220,7 +202,7 @@
     // ! speak when page load end with female voice
     const speech = new SpeechSynthesisUtterance();
     speech.text =
-      "In this dashboard, you can see today's income, total vehicles, total drivers, and today's customers. You can also see today's transportation. You can filter the transportation by type. For example, you can see only bus transportation or train transportation.";
+      'Welcome to the Transport Management System. Here you can see all the transports. You can also add a new transport.';
     speech.volume = 1;
     speech.rate = 1;
     speech.pitch = 1;

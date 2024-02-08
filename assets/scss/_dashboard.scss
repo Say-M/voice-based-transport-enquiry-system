@@ -89,5 +89,13 @@
   }
   .content-wrapper {
     flex: 1;
+    padding: 1rem;
+    .breadcrumb-wrapper {
+      margin-bottom: 2rem;
+      h3 {
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+    }
   }
 }

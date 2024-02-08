@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+      integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="dashboard-wrapper">
+      <aside class="sidebar">
+        <div class="logo">
+          <h1>TEMS Dashboard</h1>
+        </div>
+        <ul>
+          <li>
+            <a href="/index.html" class="active">
+              <span>
+                <i class="fa-solid fa-gauge-high"></i>
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <span class="dropdown-btn">
+              <span>
+                <i class="fa-solid fa-bus"></i>
+                Transports
+              </span>
+              <span class="arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </span>
+            <ul>
+              <li>
+                <a href="/transports.html">All Transports</a>
+              </li>
+              <li>
+                <a href="/add-transport.html">Add Transport</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="dropdown-btn">
+              <span>
+                <i class="fa-regular fa-id-card"></i>
+                Drivers
+              </span>
+              <span class="arrow">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </span>
+            <ul>
+              <li>
+                <a href="/drivers.html">All Drivers</a>
+              </li>
+              <li>
+                <a href="/add-driver.html">Add Driver</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <div class="content-wrapper">
+        <div class="breadcrumb-wrapper">
+          <h3>Transports</h3>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/transports.html">Transports</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Add Transport
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="container-lg">
+          <div class="card">
+            <div class="card-body">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <h5 class="card-title mb-0">Add New Transport</h5>
+              </div>
+              <form action="#" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label"> Transport Name </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter transport name"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="mb-3">
+                      <label for="type" class="form-label">
+                        Transport Type
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="type"
+                        placeholder="Enter transport name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="mb-3">
+                      <label for="seat" class="form-label">Seat</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="seat"
+                        placeholder="Enter seat"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="mb-3">
+                      <label for="registration-no" class="form-label"
+                        >Registration No</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registration-no"
+                        placeholder="Enter registration no"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    // ! speak when page load end with female voice
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = 'Add new vehicle to the system. Please fill the form.';
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+    speechSynthesis.speak;
+    setTimeout(() => {
+      speech.voice = speechSynthesis
+        .getVoices()
+        .find((voice) => voice.name === 'Google हिन्दी');
+      speechSynthesis.speak(speech);
+    }, 50);
+    // ! handle dropdowns
+    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+    dropdownBtns.forEach((btn) => {
+      btn.nextElementSibling.style.height = '0px';
+      btn.addEventListener('click', () => {
+        const height = btn.nextElementSibling.scrollHeight;
+        if (btn.nextElementSibling.style.height === '0px') {
+          btn.nextElementSibling.style.height = `${height}px`;
+          btn.classList.add('active');
+        } else {
+          btn.nextElementSibling.style.height = '0px';
+          btn.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</html>
