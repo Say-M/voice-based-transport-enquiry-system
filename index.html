@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Home Page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
@@ -28,223 +28,66 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <main class="dashboard-wrapper">
-      <aside class="sidebar">
-        <div class="logo">
-          <h1>TEMS Dashboard</h1>
-        </div>
-        <ul>
-          <li>
-            <a href="/index.html" class="active">
-              <span>
-                <i class="fa-solid fa-gauge-high"></i>
-                Dashboard
-              </span>
-            </a>
-          </li>
-          <li>
-            <span class="dropdown-btn">
-              <span>
-                <i class="fa-solid fa-bus"></i>
-                Transports
-              </span>
-              <span class="arrow">
-                <i class="fa-solid fa-chevron-right"></i>
-              </span>
-            </span>
-            <ul>
-              <li>
-                <a href="/transports.html">All Transports</a>
-              </li>
-              <li>
-                <a href="/add-transport.html">Add Transport</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span class="dropdown-btn">
-              <span>
-                <i class="fa-regular fa-id-card"></i>
-                Drivers
-              </span>
-              <span class="arrow">
-                <i class="fa-solid fa-chevron-right"></i>
-              </span>
-            </span>
-            <ul>
-              <li>
-                <a href="/drivers.html">All Drivers</a>
-              </li>
-              <li>
-                <a href="/add-driver.html">Add Driver</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-      <div class="content-wrapper">
-        <div class="breadcrumb-wrapper">
-          <h3>Dashboard</h3>
-          <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">
-                Dashboard
-              </li>
-            </ol>
-          </nav> -->
-        </div>
-        <div class="container-lg">
-          <div class="mb-4">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Today's Income
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-solid fa-money-bill"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10,000 BDT</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Total Vehicles
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-solid fa-bus"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Total Drivers
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-regular fa-id-card"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title text-truncate me-2">
-                        Today's Customers
-                      </h5>
-                      <span class="float-end display-6">
-                        <i class="fa-solid fa-users"></i>
-                      </span>
-                    </div>
-                    <p class="card-text text-muted">10</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="left">
+            <a href="./index.html" class="logo">TEMS</a>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <div
-                class="d-flex align-items-center justify-content-between mb-3"
+          <div class="center">
+            <ul>
+              <li>
+                <a href="./index.html" class="active">Home</a>
+              </li>
+              <li>
+                <a href="./dashboard.html" class="active">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <div class="buttons">
+              <a href="./login.html" class="btn btn-warning">Login</a>
+              <a href="./registration.html" class="btn btn-outline-warning"
+                >Registration</a
               >
-                <h5 class="card-title mb-0">Today's Transportation</h5>
-                <div>
-                  <select class="form-select">
-                    <option selected value="all">All</option>
-                    <option value="Bus">Bus</option>
-                    <option value="Train">Train</option>
-                    <option value="Launch">Launch</option>
-                    <option value="Flight">Flight</option>
-                  </select>
-                </div>
-              </div>
-              <div class="table-responsive">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col">SL</th>
-                      <th scope="col">Type</th>
-                      <th scope="col">Departure</th>
-                      <th scope="col">Destination</th>
-                      <th scope="col">Arrival</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Bus</td>
-                      <td>Dhaka</td>
-                      <td>Chittagong</td>
-                      <td>10:00 AM</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Train</td>
-                      <td>Dhaka</td>
-                      <td>Chittagong</td>
-                      <td>10:00 AM</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Train</td>
-                      <td>Dhaka</td>
-                      <td>Chittagong</td>
-                      <td>10:00 AM</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </div>
         </div>
+      </div>
+    </header>
+    <main class="hero">
+      <div class="container" style="position: relative">
+        <div class="hero-wrapper">
+          <h1 class="hero-title">Transport Enquiry System</h1>
+          <div class="hero-subtitle">
+            <p>
+              A transport enquiry system for a website is a tool that allows
+              users to obtain information regarding transportation services,
+              schedules, routes, and availability.
+            </p>
+          </div>
+          <div>
+            <a href="./dashboard.html" class="btn btn-warning">Get Start</a>
+          </div>
+        </div>
+        <span class="creator"> Made with ❤️ by <a href="#">Adrita</a></span>
       </div>
     </main>
   </body>
   <script>
     // ! speak when page load end with female voice
-    const speech = new SpeechSynthesisUtterance();
-    speech.text =
-      "In this dashboard, you can see today's income, total vehicles, total drivers, and today's customers. You can also see today's transportation. You can filter the transportation by type. For example, you can see only bus transportation or train transportation.";
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
-    speechSynthesis.speak;
-    setTimeout(() => {
-      speech.voice = speechSynthesis
-        .getVoices()
-        .find((voice) => voice.name === 'Google हिन्दी');
-      speechSynthesis.speak(speech);
-    }, 50);
-    // ! handle dropdowns
-    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
-    dropdownBtns.forEach((btn) => {
-      btn.nextElementSibling.style.height = '0px';
-      btn.addEventListener('click', () => {
-        const height = btn.nextElementSibling.scrollHeight;
-        if (btn.nextElementSibling.style.height === '0px') {
-          btn.nextElementSibling.style.height = `${height}px`;
-          btn.classList.add('active');
-        } else {
-          btn.nextElementSibling.style.height = '0px';
-          btn.classList.remove('active');
-        }
-      });
-    });
+    // const speech = new SpeechSynthesisUtterance();
+    // speech.text =
+    //   'Welcome to the Transport Management System. Please sign in to your account to continue.';
+    // speech.volume = 1;
+    // speech.rate = 1;
+    // speech.pitch = 1;
+    // speechSynthesis.speak;
+    // setTimeout(() => {
+    //   speech.voice = speechSynthesis
+    //     .getVoices()
+    //     .find((voice) => voice.name === 'Google हिन्दी');
+    //   speechSynthesis.speak(speech);
+    // }, 50);
   </script>
 </html>
