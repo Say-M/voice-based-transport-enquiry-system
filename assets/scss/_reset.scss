@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 * {
   margin: 0;
@@ -6,8 +6,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #242424;
 }
 
 .form-control,
