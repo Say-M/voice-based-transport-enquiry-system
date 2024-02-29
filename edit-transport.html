@@ -35,7 +35,7 @@
         </div>
         <ul>
           <li>
-            <a href="/dashboard.html" class="active">
+            <a href="./dashboard.html" class="active">
               <span>
                 <i class="fa-solid fa-gauge-high"></i>
                 Dashboard
@@ -54,10 +54,10 @@
             </span>
             <ul>
               <li>
-                <a href="/transports.html">All Transports</a>
+                <a href="./transports.html">All Transports</a>
               </li>
               <li>
-                <a href="/add-transport.html">Add Transport</a>
+                <a href="./add-transport.html">Add Transport</a>
               </li>
             </ul>
           </li>
@@ -73,14 +73,17 @@
             </span>
             <ul>
               <li>
-                <a href="/drivers.html">All Drivers</a>
+                <a href="./drivers.html">All Drivers</a>
               </li>
               <li>
-                <a href="/add-driver.html">Add Driver</a>
+                <a href="./add-driver.html">Add Driver</a>
               </li>
             </ul>
           </li>
         </ul>
+        <div class="footer">
+          <a href="./index.html" class="btn btn-outline-dark w-100">Back</a>
+        </div>
       </aside>
       <div class="content-wrapper">
         <div class="breadcrumb-wrapper">
@@ -165,18 +168,18 @@
   </body>
   <script>
     // ! speak when page load end with female voice
-    const speech = new SpeechSynthesisUtterance();
-    speech.text = 'Edit the transport details and click on the edit button.';
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
-    speechSynthesis.speak;
-    setTimeout(() => {
-      speech.voice = speechSynthesis
-        .getVoices()
-        .find((voice) => voice.name === 'Google हिन्दी');
-      speechSynthesis.speak(speech);
-    }, 50);
+    // const speech = new SpeechSynthesisUtterance();
+    // speech.text = 'Edit the transport details and click on the edit button.';
+    // speech.volume = 1;
+    // speech.rate = 1;
+    // speech.pitch = 1;
+    // speechSynthesis.speak;
+    // setTimeout(() => {
+    //   speech.voice = speechSynthesis
+    //     .getVoices()
+    //     .find((voice) => voice.name === 'Google हिन्दी');
+    //   speechSynthesis.speak(speech);
+    // }, 50);
     // ! handle dropdowns
     const dropdownBtns = document.querySelectorAll('.dropdown-btn');
     dropdownBtns.forEach((btn) => {

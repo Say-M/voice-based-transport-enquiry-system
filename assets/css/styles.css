@@ -42,7 +42,7 @@ body {
 .auth-form-wrapper {
   display: flex;
   height: 100vh;
-  background-image: url("/assets/images/auth-bg.jpg");
+  background-image: url("../images/auth-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -176,6 +176,9 @@ body {
   position: relative;
   transition: color 0.25s ease;
 }
+.dashboard-wrapper .sidebar > ul > li > ul li a:hover {
+  color: #f8b400;
+}
 .dashboard-wrapper .sidebar > ul > li > ul li a::before {
   content: "";
   position: absolute;
@@ -224,8 +227,7 @@ body {
   top: 1rem;
 }
 .header.active .header-wrapper {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: #fff;
   padding: 0.5rem 2rem;
   border-radius: 10rem;
   border: 1px solid rgba(248, 180, 0, 0.15);
@@ -281,7 +283,7 @@ body {
 }
 
 .hero {
-  background-image: url("/assets/images/hero-bg.jpg");
+  background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -640,6 +642,32 @@ footer .footer-wrapper .footer-item:nth-child(4) ul li a {
 }
 footer .footer-wrapper .footer-item:nth-child(4) ul li a:hover {
   color: #f8b400;
+}
+footer .footer-wrapper .footer-item:nth-child(4) .designer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+footer .footer-wrapper .footer-item:nth-child(4) .designer .image {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+footer .footer-wrapper .footer-item:nth-child(4) .designer .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+footer .footer-wrapper .footer-item:nth-child(4) .designer > div:not(.image) h6 {
+  margin-bottom: 0;
+}
+footer .footer-wrapper .footer-item:nth-child(4) .designer > div:not(.image) p {
+  margin-bottom: 0;
 }
 footer .footer-wrapper + p {
   border-top: 1px solid rgba(255, 255, 255, 0.15);

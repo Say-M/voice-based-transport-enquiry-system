@@ -51,13 +51,13 @@
               placeholder="Enter password"
             />
           </div>
-          <a href="/dashboard.html" type="submit" class="btn btn-primary w-100"
+          <a href="./dashboard.html" type="submit" class="btn btn-primary w-100"
             >Sign in</a
           >
           <div class="or-separator">
             <p>Or Create An Account</p>
           </div>
-          <a href="/registration.html" class="btn btn-outline-light w-100">
+          <a href="./registration.html" class="btn btn-outline-light w-100">
             Create New Account
           </a>
         </form>
@@ -66,18 +66,18 @@
   </body>
   <script>
     // ! speak when page load end with female voice
-    const speech = new SpeechSynthesisUtterance();
-    speech.text =
-      'Welcome to the Transport Management System. Please sign in to your account to continue.';
-    speech.volume = 1;
-    speech.rate = 1;
-    speech.pitch = 1;
-    speechSynthesis.speak;
-    setTimeout(() => {
-      speech.voice = speechSynthesis
-        .getVoices()
-        .find((voice) => voice.name === 'Google हिन्दी');
-      speechSynthesis.speak(speech);
-    }, 50);
+    // const speech = new SpeechSynthesisUtterance();
+    // speech.text =
+    //   'Welcome to the Transport Management System. Please sign in to your account to continue.';
+    // speech.volume = 1;
+    // speech.rate = 1;
+    // speech.pitch = 1;
+    // speechSynthesis.speak;
+    // setTimeout(() => {
+    //   speech.voice = speechSynthesis
+    //     .getVoices()
+    //     .find((voice) => voice.name === 'Google हिन्दी');
+    //   speechSynthesis.speak(speech);
+    // }, 50);
   </script>
 </html>

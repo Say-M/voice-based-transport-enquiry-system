@@ -73,6 +73,9 @@
               padding: 0.25rem 0;
               position: relative;
               transition: color 0.25s ease;
+              &:hover {
+                color: #f8b400;
+              }
               &::before {
                 content: '';
                 position: absolute;

@@ -11,7 +11,7 @@
   &.active {
     top: 1rem;
     .header-wrapper {
-      backdrop-filter: blur(10px);
+      background-color: #fff;
       padding: 0.5rem 2rem;
       border-radius: 10rem;
       border: 1px solid rgba(248, 180, 0, 0.15);
@@ -76,7 +76,7 @@
 }
 
 .hero {
-  background-image: url('/assets/images/hero-bg.jpg');
+  background-image: url('../images/hero-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -393,7 +393,7 @@ footer {
     width: 3rem;
     border-radius: 50%;
     background-color: #f8b400;
-    color: #fff !important
+    color: #fff !important;
   }
   .footer-wrapper {
     display: grid;
@@ -447,6 +447,32 @@ footer {
               &:hover {
                 color: #f8b400;
               }
+            }
+          }
+        }
+        .designer {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+          gap: 1rem;
+          .image {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: top;
+            }
+          }
+          & > div:not(.image) {
+            h6 {
+              margin-bottom: 0;
+            }
+            p {
+              margin-bottom: 0;
             }
           }
         }

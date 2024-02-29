@@ -103,7 +103,7 @@
         <span class="creator"> Made with ❤️ by <a href="#">Adrita</a></span>
       </div>
     </main>
-    <section id="overview" class="overview">
+    <!-- <section id="overview" class="overview">
       <div class="container">
         <div class="overview-wrapper">
           <div class="item">
@@ -132,7 +132,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="about" class="about">
       <div class="container">
         <div>
@@ -179,21 +179,31 @@
           <div class="services">
             <div class="service-item">
               <div class="icon">
-                <i class="fas fa-bus"></i>
+                <i class="fas fa-sailboat"></i>
               </div>
-              <h4>Bus Services</h4>
+              <h4>Launch Services</h4>
               <p>
-                We provide information about bus services, schedules, routes,
+                We provide information about launch services, schedules, routes,
                 and availability.
               </p>
             </div>
             <div class="service-item">
               <div class="icon">
-                <i class="fas fa-bus"></i>
+                <i class="fas fa-plane"></i>
               </div>
-              <h4>Bus Services</h4>
+              <h4>Flight Services</h4>
               <p>
-                We provide information about bus services, schedules, routes,
+                We provide information about flight services, schedules, routes,
+                and availability.
+              </p>
+            </div>
+            <div class="service-item">
+              <div class="icon">
+                <i class="fas fa-train"></i>
+              </div>
+              <h4>Train Services</h4>
+              <p>
+                We provide information about train services, schedules, routes,
                 and availability.
               </p>
             </div>
@@ -228,7 +238,7 @@
               <div class="feedback-item">
                 <div class="user">
                   <img
-                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="user"
                   />
                 </div>
@@ -237,13 +247,13 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis quae corrupti ipsum, saepe officiis voluptatem?
                   </p>
-                  <h4>John Doe</h4>
+                  <h4>Yeafrin Akter</h4>
                 </div>
               </div>
               <div class="feedback-item">
                 <div class="user">
                   <img
-                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="user"
                   />
                 </div>
@@ -252,7 +262,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis quae corrupti ipsum, saepe officiis voluptatem?
                   </p>
-                  <h4>John Doe</h4>
+                  <h4>Fahmida Zaman</h4>
                 </div>
               </div>
             </div>
@@ -288,10 +298,11 @@
             <h4>Contact Us</h4>
             <ul>
               <li>
-                <i class="fas fa-map-marker-alt"></i> 123, ABC Road, XYZ City
+                <i class="fas fa-map-marker-alt"></i> Bisshawcolony, CDA - 1 no,
+                C Block, ctg
               </li>
               <li><i class="fas fa-phone-alt"></i> +91 1234567890</li>
-              <li><i class="fas fa-envelope"></i> example@gmail.com</li>
+              <li><i class="fas fa-envelope"></i> C221232@ugrad.iiuc.ac.bd</li>
             </ul>
           </div>
           <div class="footer-item">
@@ -300,16 +311,16 @@
               <li>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
               </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </li>
             </ul>
+            <div class="designer">
+              <div class="image">
+                <img src="./assets/images/adrita.jpeg" alt="Adrita" />
+              </div>
+              <div>
+                <h6>Adrita</h6>
+                <p>Web Developer</p>
+              </div>
+            </div>
           </div>
         </div>
         <p>
@@ -321,19 +332,19 @@
   </body>
   <script>
     // ! speak when page load end with female voice
-    // const speech = new SpeechSynthesisUtterance();
-    // speech.text =
-    //   'Welcome to the Transport Management System. Please sign in to your account to continue.';
-    // speech.volume = 1;
-    // speech.rate = 1;
-    // speech.pitch = 1;
-    // speechSynthesis.speak;
-    // setTimeout(() => {
-    //   speech.voice = speechSynthesis
-    //     .getVoices()
-    //     .find((voice) => voice.name === 'Google हिन्दी');
-    //   speechSynthesis.speak(speech);
-    // }, 50);
+    const speech = new SpeechSynthesisUtterance();
+    speech.text =
+      'Welcome to the Transport Management System. This project is developed by Adrita. I hope you like it. Thank you.';
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+    speechSynthesis.speak;
+    setTimeout(() => {
+      speech.voice = speechSynthesis
+        .getVoices()
+        .find((voice) => voice.name === 'Google हिन्दी');
+      speechSynthesis.speak(speech);
+    }, 50);
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', () => {
