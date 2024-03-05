@@ -87,72 +87,64 @@
       </aside>
       <div class="content-wrapper">
         <div class="breadcrumb-wrapper">
-          <h3>Transports</h3>
+          <h3>Drivers</h3>
           <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 <a href="/transports.html">Transports</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Edit Transport
+                Add Transport
               </li>
             </ol>
           </nav> -->
         </div>
-        <div class="container-lg">
+        <div class="dashboard-content">
           <div class="card">
             <div class="card-body">
               <div
                 class="d-flex align-items-center justify-content-between mb-1"
               >
-                <h5 class="card-title mb-0">Edit Transport</h5>
+                <h5 class="card-title mb-0">Edit Driver</h5>
               </div>
               <form action="#" method="post">
                 <div class="mb-1">
-                  <label for="name" class="form-label">Transport Name</label>
+                  <label for="name" class="form-label">Driver Name</label>
                   <input
                     type="text"
                     class="form-control"
                     id="name"
-                    placeholder="Enter transport name"
+                    placeholder="Enter driver name"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="name" class="form-label">License No</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="licenseNo"
+                    placeholder="Enter driver name"
+                  />
+                </div>
+                <div class="mb-1">
+                  <label for="name" class="form-label">Documents</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="documents"
+                    multiple
                   />
                 </div>
                 <div class="row">
                   <div class="col-lg-4">
                     <div class="mb-1">
-                      <label for="type" class="form-label">
-                        Transport Type
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="type"
-                        placeholder="Enter transport name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="mb-1">
-                      <label for="seat" class="form-label">Seat</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="seat"
-                        placeholder="Enter seat"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="mb-1">
-                      <label for="registration-no" class="form-label"
-                        >Registration No</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="registration-no"
-                        placeholder="Enter registration no"
-                      />
+                      <label for="type" class="form-label">Transport</label>
+                      <select class="form-select" id="transport">
+                        <option value="" disabled selected>
+                          Select Transport
+                        </option>
+                        <option value="1">Transport 1</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -169,7 +161,7 @@
   <script>
     // ! speak when page load end with female voice
     // const speech = new SpeechSynthesisUtterance();
-    // speech.text = 'Edit the transport details and click on the edit button.';
+    // speech.text = 'Add new vehicle to the system. Please fill the form.';
     // speech.volume = 1;
     // speech.rate = 1;
     // speech.pitch = 1;
