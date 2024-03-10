@@ -106,7 +106,7 @@
       </aside>
       <div class="content-wrapper">
         <div class="breadcrumb-wrapper">
-          <h3>Drivers</h3>
+          <h3>Feedbacks</h3>
           <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
@@ -124,51 +124,33 @@
               <div
                 class="d-flex align-items-center justify-content-between mb-1"
               >
-                <h5 class="card-title mb-0">Edit Driver</h5>
+                <h5 class="card-title mb-0">Add New Feedback</h5>
               </div>
               <form action="#" method="post">
                 <div class="mb-1">
-                  <label for="name" class="form-label">Driver Name</label>
+                  <label for="name" class="form-label">Name</label>
                   <input
                     type="text"
                     class="form-control"
                     id="name"
-                    placeholder="Enter driver name"
+                    placeholder="Enter name"
                   />
                 </div>
                 <div class="mb-1">
-                  <label for="name" class="form-label">License No</label>
+                  <label for="text" class="form-label">Text</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="licenseNo"
-                    placeholder="Enter driver name"
+                    id="text"
+                    placeholder="Enter text"
                   />
                 </div>
                 <div class="mb-1">
-                  <label for="name" class="form-label">Documents</label>
-                  <input
-                    type="file"
-                    class="form-control"
-                    id="documents"
-                    multiple
-                  />
-                </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="mb-1">
-                      <label for="type" class="form-label">Transport</label>
-                      <select class="form-select" id="transport">
-                        <option value="" disabled selected>
-                          Select Transport
-                        </option>
-                        <option value="1">Transport 1</option>
-                      </select>
-                    </div>
-                  </div>
+                  <label for="image" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="image" multiple />
                 </div>
                 <div class="text-end">
-                  <button type="submit" class="btn btn-primary">Update</button>
+                  <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
             </div>

@@ -42,7 +42,7 @@ body {
 .auth-form-wrapper {
   display: flex;
   height: 100vh;
-  background-image: url("../images/auth-bg.jpg");
+  background-image: url("../images/auth-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -718,6 +718,10 @@ footer .footer-wrapper .right form > div > div:last-child .social li a:hover {
 .about-page .about-wrapper .about-item:nth-child(odd) div:last-child {
   flex: 1;
   margin-left: 5rem;
+}
+.about-page .about-wrapper .about-item:nth-child(odd) div:last-child h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 .about-page .about-wrapper .about-item:nth-child(odd) div:last-child p {
   color: #5a5a5a;

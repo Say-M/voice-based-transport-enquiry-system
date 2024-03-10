@@ -106,14 +106,11 @@
       </aside>
       <div class="content-wrapper">
         <div class="breadcrumb-wrapper">
-          <h3>Drivers</h3>
+          <h3>Feedbacks</h3>
           <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="/transports.html">Transports</a>
-              </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Add Transport
+                Dashboard
               </li>
             </ol>
           </nav> -->
@@ -122,55 +119,83 @@
           <div class="card">
             <div class="card-body">
               <div
-                class="d-flex align-items-center justify-content-between mb-1"
+                class="d-flex align-items-center justify-content-between mb-3"
               >
-                <h5 class="card-title mb-0">Edit Driver</h5>
+                <h5 class="card-title mb-0">All Feedbacks</h5>
+                <div class="d-flex align-items-center gap-3">
+                  <a
+                    href="./add-feedback.html"
+                    class="btn btn-primary text-nowrap"
+                  >
+                    Add Feedback
+                  </a>
+                </div>
               </div>
-              <form action="#" method="post">
-                <div class="mb-1">
-                  <label for="name" class="form-label">Driver Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Enter driver name"
-                  />
-                </div>
-                <div class="mb-1">
-                  <label for="name" class="form-label">License No</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="licenseNo"
-                    placeholder="Enter driver name"
-                  />
-                </div>
-                <div class="mb-1">
-                  <label for="name" class="form-label">Documents</label>
-                  <input
-                    type="file"
-                    class="form-control"
-                    id="documents"
-                    multiple
-                  />
-                </div>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="mb-1">
-                      <label for="type" class="form-label">Transport</label>
-                      <select class="form-select" id="transport">
-                        <option value="" disabled selected>
-                          Select Transport
-                        </option>
-                        <option value="1">Transport 1</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="text-end">
-                  <button type="submit" class="btn btn-primary">Update</button>
-                </div>
-              </form>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">SL</th>
+                      <th scope="col">Image</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Text</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>
+                        <img
+                          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="Feedback Image"
+                          class="img-fluid"
+                          style="
+                            height: 3rem;
+                            width: 3rem;
+                            object-fit: cover;
+                            border-radius: 50%;
+                          "
+                        />
+                      </td>
+                      <td>Yeafrin Akter</td>
+                      <td>
+                        The real-time updates and accurate information on
+                        available transportation options make this website a
+                        must-have for anyone traveling.
+                      </td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">1</td>
+                      <td>
+                        <img
+                          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="Feedback Image"
+                          class="img-fluid"
+                          style="
+                            height: 3rem;
+                            width: 3rem;
+                            object-fit: cover;
+                            border-radius: 50%;
+                          "
+                        />
+                      </td>
+                      <td>Fahmida Zaman</td>
+                      <td>
+                        I appreciate the comprehensive coverage of transport
+                        modes and routes. It's a one-stop solution for all my
+                        travel queries.
+                      </td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -180,7 +205,8 @@
   <script>
     // ! speak when page load end with female voice
     const speech = new SpeechSynthesisUtterance();
-    speech.text = 'Add new vehicle to the system. Please fill the form.';
+    speech.text =
+      'Welcome to the Transport Management System. Here you can see all the transports. You can also add a new transport.';
     speech.volume = 1;
     speech.rate = 1;
     speech.pitch = 1;
